@@ -1,5 +1,5 @@
 (() => {
-    fetch("data/staff.json")
+    fetch("data\staff.json")
     .then((response) => response.json())
     .then((data) => {
         const staffTable = document.getElementById("staffTable");
