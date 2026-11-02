@@ -17,10 +17,10 @@ const updateTime = () => {
     const rotSeconds = seconds * 6 - 90;
     secondHand.style.transform = `rotate(${rotSeconds}deg)`;
     const minutes = myDate.getMinutes();
-    const rotMinutes = minutes * 6 - 90;
+    const rotMinutes = (minutes * 6 - 90);
     minHand.style.transform = `rotate(${rotMinutes}deg)`;
-    const hours = myDate.getHours();
-    const rotHours = hours * 6 - 90;
+    let hours = myDate.getHours() + (myDate.getMinutes() / 60);
+    const rotHours = (hours * 30 - 90) ;
     hrHand.style.transform = `rotate(${rotHours}deg)`;
 
 };
